@@ -133,47 +133,6 @@ reset.addEventListener('click', () =>
 
 
 
-//?enlever un nom de class à un élément
-// var firstRows = document.getElementsByClassName("firstRow");
-// while (firstRows.length){
-// firstRows[0].classList.remove("firstRow");}
-            
-//?différents essais pour que le bouton permette de mettre l'input number en valeur de côté de la grille
-/* function getValue(){
-    let choixNumber = document.querySelector("#choixNumber");
-    let submitNumber = document.querySelector('#submitNumber');
-    submitNumber.addEventListener('click', (e) =>
-        {let test = choixNumber.value;
-        console.log(test);
-        return test;
-        })}
-
-let nbCase = getValue();
-console.log(nbCase)
-*/
-                                               
-/* let nbCase = () => {
-    let choixNumber = document.querySelector("#choixNumber");
-    let submitNumber = document.querySelector('#submitNumber');
-    submitNumber.addEventListener('click', (e) =>
-        {let test = choixNumber.value;
-        return test;
-        })}
-
-console.log(nbCase())                                         
-let vasy = nbCase();
-*/
-                                               
-/* let choixNumber = document.querySelector("#choixNumber");
-let submitNumber = document.querySelector('#submitNumber');
-let vasy = choixNumber.value;
-function reset(){
-    window.location.reload(true);
-}
-*/
-
-
-
 
 
 
