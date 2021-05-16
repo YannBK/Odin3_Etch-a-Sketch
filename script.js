@@ -34,24 +34,30 @@ function createCol (nbCols){
     }
 }
 //! OK
-//création de la grille
-function makeGrid(nb) {
-    createRows(nb);
-    createCol(nb);
+// création de la grille via input number
+let saisir = document.getElementById('choixNumber');
+function makeGrid() {
+    let saisie = saisir.value;
+    createRows(saisie);
+    createCol(saisie);
 }
 //! OK
-// (ré)initialisation grille via input number (cf html attribut onchange)
-function onyarrive (n){
+// (ré)initialisation grille 
+function onyarrive (){
     Array.from(firstRows).forEach(firstRow => {container.removeChild(firstRow);})
-    makeGrid(n);
+    makeGrid();
     couleurs();
 }
+//!OK
+// affichage de la grille via button
+let sub = document.getElementById('submitNumber');
+sub.addEventListener("click", onyarrive)
+
 //TODO OK essayer en plus condensé, plus élégant, genre `${alt[i].id}()` pour lancer la fonction correspondante à l'id de l'input ??
 // choix des couleurs
 function couleurs (){
 let alt = document.querySelector('form').querySelectorAll('input');
 for (let i = 0; i < alt.length; i++){
-    console.log(alt[i].id + alt[i].checked)
      if (alt[i].checked === true){
          if(alt[i].id === "licorne"){
             licorne()
