@@ -5,9 +5,6 @@
 //*empêcher les utilisateurs de mettre un nombre >50 ça passe et ça fait bugger
 
 //TODO          TODO          TODO          TODO          TODO          TODO          
-//*pour onchange et onyarrive implémentés dans html, esssayer de dépolluer html et de faire avec addEventListener direct sur script.js
-
-//TODO          TODO          TODO          TODO          TODO          TODO          
 //*essayer de faire une grille rectangulaire ;)
 
 //! OK
@@ -15,6 +12,7 @@
  const container = document.querySelector('#container');
 let firstRows = document.getElementsByClassName("firstRow");
 let cells = document.getElementsByClassName("cell");
+
 //! OK
 //création des lignes
 function createRows (nbRows){
@@ -23,6 +21,7 @@ function createRows (nbRows){
         container.appendChild(row).className = 'firstRow';
     }
 };
+
 //! OK
 //création des colonnes
 function createCol (nbCols){
@@ -33,6 +32,7 @@ function createCol (nbCols){
         }
     }
 }
+
 //! OK
 // création de la grille via input number
 let saisir = document.getElementById('choixNumber');
@@ -41,6 +41,7 @@ function makeGrid() {
     createRows(saisie);
     createCol(saisie);
 }
+
 //! OK
 // (ré)initialisation grille 
 function onyarrive (){
@@ -48,37 +49,45 @@ function onyarrive (){
     makeGrid();
     couleurs();
 }
+
 //!OK
 // affichage de la grille via button
 let sub = document.getElementById('submitNumber');
 sub.addEventListener("click", onyarrive)
 
-//TODO OK essayer en plus condensé, plus élégant, genre `${alt[i].id}()` pour lancer la fonction correspondante à l'id de l'input ??
-// choix des couleurs
-function couleurs (){
+//!OK
+//TODO OK essayer en plus condensé, plus élégant, genre `${alt[i].id}()` pour lancer la fonction correspondante à l'id de l'input ?? réunir listener + couleurs()?
+// listener des btn radio
 let alt = document.querySelector('form').querySelectorAll('input');
-for (let i = 0; i < alt.length; i++){
-     if (alt[i].checked === true){
-         if(alt[i].id === "licorne"){
-            licorne()
+for (var i = 0; i < alt.length; i++) {
+    alt[i].addEventListener("change", couleurs);
+}
+// choix des couleurs
+function couleurs() {
+    for (let i = 0; i < alt.length; i++) {
+        if (alt[i].checked === true) {
+            if (alt[i].id === "licorne") {
+                licorne()
+            }
+            if (alt[i].id === "black") {
+                black()
+            }
+            if (alt[i].id === "color") {
+                color()
+            }
+            if (alt[i].id === "pastel") {
+                pastel()
+            }
+            if (alt[i].id === "grey") {
+                grey()
+            }
+            if (alt[i].id === "white") {
+                white()
+            }
         }
-        if(alt[i].id === "black"){
-            black()
-        }
-        if(alt[i].id === "color"){
-            color()
-        }
-        if(alt[i].id === "pastel"){
-            pastel()
-        }
-        if(alt[i].id === "grey"){
-            grey()
-        }
-        if(alt[i].id === "white"){
-            white()
-        }
-     }
-}}
+    }
+}
+
 //! OK
 //configuration des couleurs et de l'event mouseover
 //pastel
@@ -116,6 +125,7 @@ const white = () =>{
         cells[i].addEventListener("mouseover", (e) =>{
         grey = grey + 30;
         e.target.style.backgroundColor = `rgb(${grey}, ${grey}, ${grey}`})}}
+
 //! OK                                      
 //clear
 let reset = document.querySelector('#clear')

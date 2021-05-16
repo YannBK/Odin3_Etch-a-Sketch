@@ -1,27 +1,26 @@
 <!DOCTYPE html>
 <html>
-    
+
 <head>
     <!--meta données-->
     <meta charset=utf-8>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--CSS-->
-    <link href="style.css" rel="stylesheet"><!--lier la feuille de style-->
-    
-    <title></title><!--titre de l'onglet-->
-    
+    <link href="style.css" rel="stylesheet">
+    <!--lier la feuille de style-->
+
+    <title></title>
+    <!--titre de l'onglet-->
+
 </head>
 
 <body>
-    <header>
-        
-    </header>
     <main>
         <h1>coucoyyu</h1>
-       
+
         <div id="choix">
             <label for="choix">Choisissez la taille de votre grille :</label>
-            <input type="number" id="choixNumber" name="choix" min = 9 max = 50 >
+            <input type="number" id="choixNumber" name="choix" min=9 max=50>
             <button id="submitNumber">Go</button>
         </div>
 
@@ -30,39 +29,31 @@
         <form id="couleur">
             <fieldset>
                 <legend>Quelle est votre humeur ?</legend>
-            <label for="licorne">licorne</label>
-            <input type="radio" id ="licorne" name="beauté" value="licorne" onchange = "couleurs()">
-        
-            <label for="black">black</label>
-            <input type="radio" id = "black" name="beauté" value="black" onchange = "couleurs()">
-            <br>
-            <label for="color">color</label>
-            <input type="radio" id ="color" name="beauté" value="color" onchange = "couleurs()">
-        
-            <label for="pastel">pastel</label>
-            <input type="radio" id = "pastel" name="beauté" value="pastel" onchange = "couleurs()">
-            <br>
-            <label for="grey">grey</label>
-            <input type="radio" id = "grey" name="beauté" value="grey" onchange = "couleurs()">
+                <label for="licorne">licorne</label>
+                <input type="radio" id="licorne" name="beauté" value="licorne">
 
-            <label for="white">white</label>
-            <input type="radio" id = "white" name="beauté" value="white" onchange = "couleurs()">
+                <label for="black">black</label>
+                <input type="radio" id="black" name="beauté" value="black">
+                <br>
+                <label for="color">color</label>
+                <input type="radio" id="color" name="beauté" value="color">
+
+                <label for="pastel">pastel</label>
+                <input type="radio" id="pastel" name="beauté" value="pastel">
+                <br>
+                <label for="grey">grey</label>
+                <input type="radio" id="grey" name="beauté" value="grey">
+
+                <label for="white">white</label>
+                <input type="radio" id="white" name="beauté" value="white">
             </fieldset>
         </form>
 
-        <button id ="clear">Effacer</button>
-
-
+        <button id="clear">Effacer</button>
 
     </main>
-    <footer>
-        
-    </footer>
-
-
-
-
-    <script src="script.js"></script> <!--intégrer un script Js-->
+    <script src="script.js"></script>
+    <!--intégrer un script Js-->
 </body>
 
 </html>
