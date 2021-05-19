@@ -67,3 +67,21 @@ td{
     padding: 0px;
     background-color: #fff;
 }
+
+@media(max-width:700px){
+    h1{
+        margin: 1rem auto;
+        font-size: 1.5rem;
+    }
+    /* -------------------------Choix taille ---------------*/
+    #choix{
+        margin: 1rem auto 0.5rem auto;
+        text-align: left;
+    }
+    /* ------------------------- Choix couleurs ---------------*/
+    fieldset{
+        width: 320px;
+        border-radius: 5px;
+    }
+
+}
