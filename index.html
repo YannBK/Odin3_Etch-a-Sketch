@@ -2,16 +2,12 @@
 <html>
 
 <head>
-    <!--meta données-->
     <meta charset=utf-8>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--CSS-->
     <link href="style.css" rel="stylesheet">
-    <!--lier la feuille de style-->
 
     <title>Etch-A-Sketch</title>
-    <!--titre de l'onglet-->
-
 </head>
 
 <body>
@@ -24,36 +20,44 @@
             <button id="submitNumber">Go</button>
         </div>
 
-        <div id="container"></div>
-
-        <form id="couleur">
+        <form>
             <fieldset>
                 <legend>Quelle est votre humeur ?</legend>
-                <input type="radio" id="licorne" name="beauté" value="licorne">
-                <label for="licorne">Comme une licorne qui pête</label>
+                <table>
+                    <tr>
+                        <td><input type="radio" id="licorne" name="beauté" value="licorne">
+                            <label for="licorne">Comme une licorne qui pête</label>
+                        </td>
+                        <td><input type="radio" id="black" name="beauté" value="black">
+                            <label for="black">De plus en plus morose</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="color" name="beauté" value="color">
+                            <label for="color">Prêt à embrasser le monde</label>
+                        </td>
+                        <td><input type="radio" id="pastel" name="beauté" value="pastel">
+                            <label for="pastel">Plutôt en demie teinte</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><input type="radio" id="grey" name="beauté" value="grey">
+                            <label for="grey">Retour aux années 20 (<b>19</b>20)</label>
+                        </td>
+                        <td><input type="radio" id="white" name="beauté" value="white">
+                            <label for="white">Tel un ciel qui s'éclaircit</label>
+                        </td>
+                    </tr>
+                </table>
 
-                <input type="radio" id="black" name="beauté" value="black">
-                <label for="black">De plus en plus morose</label>
-                <br>
-                <input type="radio" id="color" name="beauté" value="color">
-                <label for="color">Prêt à embrasser le monde</label>
-
-                <input type="radio" id="pastel" name="beauté" value="pastel">
-                <label for="pastel">Plutôt en demie teinte</label>
-                <br>
-                <input type="radio" id="grey" name="beauté" value="grey">
-                <label for="grey">Retour aux années 20 (1920)</label>
-
-                <input type="radio" id="white" name="beauté" value="white">
-                <label for="white">Tel un ciel qui s'éclaircit</label>
             </fieldset>
         </form>
 
-        <button id="clear">Effacer</button>
+        <button id="clear"><b>Gommer</b></button>
 
+        <div id="container"></div>
     </main>
     <script src="script.js"></script>
-    <!--intégrer un script Js-->
 </body>
 
 </html>

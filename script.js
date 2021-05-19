@@ -6,9 +6,6 @@
 let largeur = window.innerWidth;
 console.log(largeur)
 
-//TODO          TODO          TODO          TODO          TODO          TODO          
-//*essayer de faire une grille rectangulaire ;)
-
 //! OK
 //variable de création de la grille
 const container = document.querySelector('#container');
@@ -38,7 +35,6 @@ function createCol(nbCols) {
 //! OK
 // création de la grille via input number
 let saisir = document.getElementById('choixNumber');
-
 
 function makeGrid() {
     let saisie = saisir.value;
@@ -110,7 +106,7 @@ function couleurs() {
 const pastel = () => {
     for (let i = 0; i < cells.length; i++) {
         cells[i].addEventListener("mouseover", (e) => {
-            e.target.style.backgroundColor = `rgb(${Math.random() * 256}, ${Math.random() * 256}, ${Math.random() * 256}, ${0.5 * Math.random() + 0.1})`
+            e.target.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 80%`
         })
     }
 }
