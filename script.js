@@ -1,10 +1,5 @@
-//TODO          TODO          TODO          TODO          TODO          TODO          
-//*enlever les double bordures
 
-//TODO          TODO          TODO          TODO          TODO          TODO          
-//*détecter les changement de largeur de window et mettre à jour les conditions limitantes de taille de grille
-let largeur = window.innerWidth;
-console.log(largeur)
+
 
 //! OK
 //variable de création de la grille
@@ -37,6 +32,7 @@ function createCol(nbCols) {
 let saisir = document.getElementById('choixNumber');
 
 function makeGrid() {
+    let largeur = window.innerWidth;
     let saisie = saisir.value;
     if(saisir.value > 50){
     saisie = 50;
@@ -50,6 +46,9 @@ function makeGrid() {
     if(largeur < 700 && saisir.value > 20){
         saisie = 20;
     } 
+    if(largeur < 475 && saisir.value > 15){
+        saisie = 15;
+    } 
     createRows(saisie);
     createCol(saisie);
 }
@@ -61,7 +60,7 @@ function onyarrive() {
     makeGrid();
     couleurs();
 }
-
+window.addEventListener('resize', onyarrive)
 //!OK
 // affichage de la grille via button
 let sub = document.getElementById('submitNumber');
@@ -158,10 +157,11 @@ const white = () => {
 
 //! OK                                      
 //clear
-let reset = document.querySelector('#clear')
-reset.addEventListener('click', () => {
+const clear = () => {
     Array.from(cells).forEach(cell => { cell.style.backgroundColor = 'white'; })
-})
+}
+let reset = document.querySelector('#clear')
+reset.addEventListener('click', clear)
 
 
 
