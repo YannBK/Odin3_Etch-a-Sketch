@@ -7,11 +7,68 @@ body{
     align-self: center;
     text-align: center;
     height: 100vh;
-    background: linear-gradient(165deg, rgb(250, 247, 104), rgb(74, 30, 156));
+    background-color: rgb(255, 255, 85);
+    overflow: hidden;
+}
+main {
+    z-index: 10;
 }
 
 h1{
     margin: 2rem auto;
+}
+/* ---------- Arrière plan ---------*/
+.factice {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background: radial-gradient(ellipse at center, rgb(255,255,85)0.5%,rgb(10,2,25) 1%, rgb(20, 4, 50) 25%,rgb(40, 8, 100) 40%, rgb(132, 73, 180) 42%, rgb(255,255,85)70%);
+    z-index: 1;
+}
+
+.factice:hover {
+    animation: movve 1000s infinite linear;
+}
+
+.containerG {
+    position: relative;
+    right: 50vw;
+}
+
+@keyframes movve {
+    0% {
+        transform: rotate(0deg)skewX(0deg)skewY(0deg);
+    }
+    10% {
+        transform: rotate(36deg)skewX(-5deg)skewY(-5deg);
+    }
+    20% {
+        transform: rotate(72deg)skewX(5deg)skewY(5deg);
+    }
+    30% {
+        transform: rotate(108deg)skewX(-5deg)skewY(-5deg);
+    }
+    40% {
+        transform: rotate(144deg)skewX(5deg)skewY(5deg);
+    }
+    50% {
+        transform: rotate(180deg)skewX(-5deg)skewY(-5deg);
+    }
+    60% {
+        transform: rotate(216deg)skewX(5deg)skewY(5deg);
+    }
+    70% {
+        transform: rotate(252deg)skewX(-5deg)skewY(-5deg);
+    }
+    80% {
+        transform: rotate(288deg)skewX(5deg)skewY(5deg);
+    }
+    90% {
+        transform: rotate(324deg)skewX(-5deg)skewY(-5deg);
+    }
+    100% {
+        transform: rotate(360deg)skewX(0deg)skewY(0deg);
+    }
 }
 /* -------------------------Choix taille ---------------*/
 #choix{
@@ -20,23 +77,25 @@ h1{
 /* ------------------------- Choix couleurs ---------------*/
 fieldset{
     display: inline-block;
-    background-color: rgba(131, 92, 202, 0.6);
+    background-color: rgba(132, 73, 180, 0.9);
     margin: 0rem auto;
     border: none;
     border-radius: 30%;
     width: 420px;
+    color: white;
 }
 
 legend{
-    background-color: rgb(241, 217, 109);
-    border-radius: 5px;;
+    background-color: rgb(255,255,85);
+    border-radius: 5px;
+    color: rgb(39, 8, 97);
 }
 
 td{
     text-align: left;
 }
 /* ------------------------- Clear ---------------*/
-#clear{
+.clear{
     margin: 1rem auto;
     width: 80px;
     height: 30px;
@@ -47,11 +106,11 @@ td{
     letter-spacing: 0.1rem;
 }
 
-#clear:hover{
+.clear:hover{
     transition: 0.3s;
-    background-color: rgba(131, 92, 202, 0.6);
-    box-shadow: 3px 3px 10px rgb(241, 217, 109);
-    color: cornsilk;
+    background-color: rgba(39, 8, 97, 0.6);
+    box-shadow: 0 0 40px rgb(255,255,85);
+    color: rgb(255,255,85);
 }
 /* ------------------------- Grille ---------------*/
 .addColor{
@@ -59,14 +118,29 @@ td{
 }
 
 .cell {
-    border: 1px solid black;
+    /* border: 1px solid transparent; */
+    border: none;
     min-width: 20px;
     min-height: 20px;
     display: inline-block;
     margin: -2px 0px -2px 0px;
     padding: 0px;
-    background-color: #fff;
+    background-color: transparent;
 }
+/*bordures extérieures doublées*/
+
+/* .firstRow div:first-child {
+    border-left: 1.75px solid transparent;
+}
+.firstRow div:last-child {
+    border-right: 1.75px solid transparent;
+}
+.firstRow:first-of-type div{
+    border-top: 1.75px solid transparent;
+}
+.firstRow:last-of-type div{
+    border-bottom: 1.75px solid transparent;
+} */
 
 @media(max-width:700px){
     h1{

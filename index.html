@@ -5,58 +5,62 @@
     <meta charset=utf-8>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--CSS-->
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
     <title>Etch-A-Sketch</title>
 </head>
 
 <body>
-    <main>
-        <h1>Dévoilez votre âme d'artiste</h1>
+    <img src="url(" alt="">
+    <div class="containerG">
+        <div class="factice">
+            <main>
+                <h1>Dévoilez votre âme d'artiste</h1>
 
-        <div id="choix">
-            <label for="choix">Choisissez la taille de votre grille :</label>
-            <input type="number" id="choixNumber" name="choix" min=9 max=50>
-            <button id="submitNumber">Go</button>
+                <div id="choix">
+                    <label for="choix">Choisissez la taille de votre grille :</label>
+                    <input type="number" id="choixNumber" name="choix" min=9 max=50 value="13">
+                </div>
+
+                <form>
+                    <fieldset>
+                        <legend>Choisissez votre humeur du moment</legend>
+                        <!--!enlever cette table de placement et utiliser du CSS-->
+                        <table>
+                            <tr>
+                                <td><input type="radio" id="licorne" name="beauté" value="licorne">
+                                    <label for="licorne">Comme une licorne qui pête</label>
+                                </td>
+                                <td><input type="radio" id="black" name="beauté" value="black">
+                                    <label for="black">De plus en plus morose</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" id="color" name="beauté" value="color">
+                                    <label for="color">Prêt à embrasser le monde</label>
+                                </td>
+                                <td><input type="radio" id="pastel" name="beauté" value="pastel">
+                                    <label for="pastel">D'une douceur guimauve</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" id="grey" name="beauté" value="grey">
+                                    <label for="grey">Retour aux années 20 (<b>19</b>20)</label>
+                                </td>
+                                <td><input type="radio" id="white" name="beauté" value="white">
+                                    <label for="white">Tel un ciel qui s'éclaircit</label>
+                                </td>
+                            </tr>
+                        </table>
+                    </fieldset>
+                </form>
+                <button id="clear" class="clear"><b>Gommer</b></button>
+                <button id="submitNumber" class="clear">Go</button>
+
+                <div id="container"></div>
+            </main>
         </div>
-
-        <form>
-            <fieldset>
-                <legend>Quelle est votre humeur ?</legend>
-                <table>
-                    <tr>
-                        <td><input type="radio" id="licorne" name="beauté" value="licorne">
-                            <label for="licorne">Comme une licorne qui pête</label>
-                        </td>
-                        <td><input type="radio" id="black" name="beauté" value="black">
-                            <label for="black">De plus en plus morose</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" id="color" name="beauté" value="color">
-                            <label for="color">Prêt à embrasser le monde</label>
-                        </td>
-                        <td><input type="radio" id="pastel" name="beauté" value="pastel">
-                            <label for="pastel">Plutôt en demie teinte</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><input type="radio" id="grey" name="beauté" value="grey">
-                            <label for="grey">Retour aux années 20 (<b>19</b>20)</label>
-                        </td>
-                        <td><input type="radio" id="white" name="beauté" value="white">
-                            <label for="white">Tel un ciel qui s'éclaircit</label>
-                        </td>
-                    </tr>
-                </table>
-
-            </fieldset>
-        </form>
-
-        <button id="clear"><b>Gommer</b></button>
-
-        <div id="container"></div>
-    </main>
+    </div>
     <script src="script.js"></script>
 </body>
 

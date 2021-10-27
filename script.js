@@ -22,7 +22,7 @@ function createCol(nbCols) {
     for (let i = 0; i < firstRows.length; i++) { //?pour chaque div précédemment créée
         for (let j = 0; j < nbCols; j++) {
             let col = document.createElement('div'); //? créer une div
-            firstRows[j].appendChild(col).className = 'cell'; //?qui vient après verticalement grâce à inline-block du CSS
+            firstRows[j].appendChild(col).className = 'cell'; //?qui vient après verticalement grâce à inline-block 
         }
     }
 }
@@ -113,7 +113,7 @@ const pastel = () => {
 const color = () => {
     for (let i = 0; i < cells.length; i++) {
         cells[i].addEventListener("mouseover", (e) => {
-            e.target.style.backgroundColor = `rgb(${Math.random() * 256}, ${Math.random() * 256}, ${Math.random() * 256}`
+            e.target.style.backgroundColor = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}`
         })
     }
 }
@@ -129,7 +129,7 @@ const licorne = () => {
 const grey = () => {
     for (let i = 0; i < cells.length; i++) {
         cells[i].addEventListener("mouseover", (e) => {
-            let grey = Math.random() * 256;
+            let grey = Math.random() * 255;
             e.target.style.backgroundColor = `rgb(${grey}, ${grey}, ${grey}`
         })
     }
@@ -137,7 +137,7 @@ const grey = () => {
 //gris qui s'assombrit
 const black = () => {
     for (let i = 0; i < cells.length; i++) {
-        let grey = 256;
+        let grey = 255;
         cells[i].addEventListener("mouseover", (e) => {
             grey = grey * 0.8;
             e.target.style.backgroundColor = `rgb(${grey}, ${grey}, ${grey}`
@@ -158,7 +158,7 @@ const white = () => {
 //! OK                                      
 //clear
 const clear = () => {
-    Array.from(cells).forEach(cell => { cell.style.backgroundColor = 'white'; })
+    Array.from(cells).forEach(cell => { cell.style.backgroundColor = 'transparent'; })
 }
 let reset = document.querySelector('#clear')
 reset.addEventListener('click', clear)
